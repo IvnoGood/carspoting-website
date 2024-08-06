@@ -1,0 +1,68 @@
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Ensure the video covers the width of the header */
+    height: 100%; /* Ensure the video covers the height of the header */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensures the video stays behind other elements */
+    object-fit: cover; /* Ensure the video covers the entire area without distortion */
+    object-position: center; /* Center the video content */
+}
+
+.learn {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 550px; */
+    flex: 1;
+    max-width: 550px;
+    margin-top: 25%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    background-color:rgba(0, 0, 0, 0.3);
+    border-radius: 70px;
+}
+
+.learn-more {
+    height: 40px;
+    width: 160px;
+    background-color: white;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.discover-title {
+    margin-bottom: 10px;
+}
+
+.video-controls-menu {
+    position: absolute; /* Position the container absolutely */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 150px;
+    border-top-right-radius: 15px ;
+    padding-left: 5px;
+    height: 25px;
+    margin-top: 180px;
+}
+
+#video-controls {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255, 0.5);
+    margin: 0;
+    cursor: pointer;
+}
+
+#settings-icon {
+    color: rgb(255, 255, 255, 0.5);
+}
