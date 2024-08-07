@@ -51,8 +51,13 @@
     width: 0;
     min-width: 50px;
     padding-left: 10px;
+    outline: none;
 }
 
 .search-bar::placeholder{
     opacity: 1;
+}
+
+.search-bar:focus {
+    border: 2px solid white;
 }

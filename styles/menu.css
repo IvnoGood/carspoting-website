@@ -1,4 +1,4 @@
-#myVideo {
+.image-mains-slideshow {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -8,6 +8,43 @@
     z-index: -1; /* Ensures the video stays behind other elements */
     object-fit: cover; /* Ensure the video covers the entire area without distortion */
     object-position: center; /* Center the video content */
+    animation: fadeIn 3s;
+    animation: fadeOut 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 1; }
+  0% { opacity: 0; }
+}
+
+.image-main-slideshow-model {
+    position: absolute; /* Position the container absolutely */
+    bottom: 0; /* Align to the bottom */
+    /* left: 0; */ /* Align to the left */
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: rgb(0, 0, 0, 0.7);
+    flex: 1;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+    padding-left: 5px;
+    height: 25px;
+    margin-top: 180px;
+    margin-bottom: 10px;
+}
+
+.slideshow-model-text {
+    margin-right: 5px;
+    color: white;
+    animation: fadeIn 3s;
+    animation: fadeOut 3s;
 }
 
 .learn {
@@ -48,7 +85,7 @@
     align-items: center;
     justify-content: start;
     background-color: rgb(0, 0, 0, 0.5);
-    width: 150px;
+    width: 170px;
     border-top-right-radius: 15px ;
     padding-left: 5px;
     height: 25px;
@@ -63,6 +100,28 @@
     cursor: pointer;
 }
 
+#video-controls:active {
+    color: white;
+}
+
 #settings-icon {
     color: rgb(255, 255, 255, 0.5);
+}
+
+.radio-buttons {
+    bottom: 0; /* Align to the bottom */
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-top-right-radius: 15px ;
+    padding-left: 5px;
+    height: 25px;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+#slideshoow-buttons  {
+    color: white;
 }

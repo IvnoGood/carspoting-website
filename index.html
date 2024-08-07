@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/head.css">
-    <link rel="stylesheet" href="/styles/general.css">
-    <link rel="stylesheet" href="/styles/menu.css">
-    <link rel="stylesheet" href="/styles/articles.css">
+    <link rel="stylesheet" href="./styles/head.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/articles.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -18,12 +18,6 @@
 
 <body>
     <header>
-
-
-
-        </div>
-        </div>
-
         <div class="header">
 
             <img src="./icons/bird-ico.png" class="ico-image">
@@ -52,20 +46,49 @@
 
         <div>
             <div class="video">
-                <video autoplay muted loop id="myVideo">
-                    <source src="background-video.mp4" type="video/mp4">
-                </video>
+                <!-- <video autoplay muted loop id="myVideo">
+                    <source src="background-video.mp4" type="video/mp4"> -->
+                <div class="main-slideshow">
+                    <img class="image-mains-slideshow"
+                        src="/carspotting/Chevrolet/Corvette/C8 corvette stingray/C8_corvette_stingray_6.jpeg">
+                    <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text">Corvette</p>
+                        <p class="slideshow-model-text">C8 Stingray</p>
+                        <p class="slideshow-model-text">2020</p>
+                    </div>
+                </div>
+                <div class="main-slideshow">
+                    <img class="image-mains-slideshow"
+                        src="carspotting\Chevrolet\Corvette\C8 corvette ZO6\C8_corvette_ZO6_1.jpeg">
+                    <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text">Corvette</p><br>
+                        <p class="slideshow-model-text">C8 ZO6</p><br>
+                        <p class="slideshow-model-text">2023</p><br>
+                    </div>
+                </div>
             </div>
             <div class="video-controls-menu">
                 <span class="material-symbols-outlined" id="settings-icon">
                     settings
                 </span>
-                <button id="video-controls" onclick="playPause()">Play/pause video</button>
+                <button id="video-controls" onclick="playPause()">Play/pause slideshow</button>
             </div>
         </div>
+
+        <div class="radio-buttons">
+            <span class="material-symbols-outlined" id="slideshoow-buttons">
+                radio_button_checked
+            </span>
+
+            <span class="material-symbols-outlined" id="slideshoow-buttons">
+                radio_button_checked
+            </span>
+        </div>
+        <script src="./javascript/main.js"></script>
         <!--         <div>
             <h3 class="main-title">Hi i'm gay</h3>
         </div> -->
+
     </main>
 </body>
 
