@@ -109,19 +109,34 @@
 }
 
 .radio-buttons {
+    position: absolute;
     bottom: 0; /* Align to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    background-color: rgb(0, 0, 0, 0.5);
-    border-top-right-radius: 15px ;
+    background-color: transparent;
+    border-top-right-radius: 15px;
     padding-left: 5px;
     height: 25px;
-    margin-top: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
+    width: fit-content;
+    margin-bottom: 10px;
 }
 
-#slideshoow-buttons  {
+.slideshow-button  {
     color: white;
+    cursor: pointer;
+}
+
+.bottom-main-buttons {
+
+    bottom: 0; /* Align to the bottom */
+    position: relative; /* Ensure the parent has relative positioning */
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
 }

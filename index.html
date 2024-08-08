@@ -49,8 +49,7 @@
                 <!-- <video autoplay muted loop id="myVideo">
                     <source src="background-video.mp4" type="video/mp4"> -->
                 <div class="main-slideshow">
-                    <img class="image-mains-slideshow"
-                        src="/carspotting/Chevrolet/Corvette/C8 corvette stingray/C8_corvette_stingray_6.jpeg">
+                    <img class="image-mains-slideshow" src="./thumbnails/C8_corvette_stingray_6.jpeg">
                     <div class="image-main-slideshow-model">
                         <p class="slideshow-model-text">Corvette</p>
                         <p class="slideshow-model-text">C8 Stingray</p>
@@ -58,8 +57,7 @@
                     </div>
                 </div>
                 <div class="main-slideshow">
-                    <img class="image-mains-slideshow"
-                        src="carspotting\Chevrolet\Corvette\C8 corvette ZO6\C8_corvette_ZO6_1.jpeg">
+                    <img class="image-mains-slideshow" src="./thumbnails/C8_corvette_ZO6_1.jpeg">
                     <div class="image-main-slideshow-model">
                         <p class="slideshow-model-text">Corvette</p><br>
                         <p class="slideshow-model-text">C8 ZO6</p><br>
@@ -67,22 +65,24 @@
                     </div>
                 </div>
             </div>
-            <div class="video-controls-menu">
-                <span class="material-symbols-outlined" id="settings-icon">
-                    settings
-                </span>
-                <button id="video-controls" onclick="playPause()">Play/pause slideshow</button>
+            <div class="bottom-main-buttons">
+                <div class="video-controls-menu">
+                    <span class="material-symbols-outlined" id="settings-icon">
+                        settings
+                    </span>
+                    <button id="video-controls" onclick="playPause()">Play/pause slideshow</button>
+                </div>
+
+
+                <div class="radio-buttons">
+                    <span class="material-symbols-outlined slideshow-button" id="slideshow-button1" onclick="view(1)">
+                        radio_button_checked
+                    </span>
+                    <span class="material-symbols-outlined slideshow-button" id="slideshow-button2" onclick="view(2)">
+                        radio_button_checked
+                    </span>
+                </div>
             </div>
-        </div>
-
-        <div class="radio-buttons">
-            <span class="material-symbols-outlined" id="slideshoow-buttons">
-                radio_button_checked
-            </span>
-
-            <span class="material-symbols-outlined" id="slideshoow-buttons">
-                radio_button_checked
-            </span>
         </div>
         <script src="./javascript/main.js"></script>
         <!--         <div>
