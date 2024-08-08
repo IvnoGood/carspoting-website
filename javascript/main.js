@@ -19,6 +19,7 @@ function playPause() {
 function carousel() {
   if (carouselTimeout) {
     clearTimeout(carouselTimeout);
+    updateButtons();
   }
 
   if (played) {
@@ -57,9 +58,25 @@ function updateButtons() {
   if (myIndex === 0) {
     document.getElementById("slideshow-button1").style.color = "gray";
     document.getElementById("slideshow-button2").style.color = "white";
-  } else {
-    document.getElementById("slideshow-button2").style.color = "gray";
+    document.getElementById("slideshow-button3").style.color = "white";
+    document.getElementById("slideshow-button4").style.color = "white";
+  } else if(myIndex === 1) {
     document.getElementById("slideshow-button1").style.color = "white";
+    document.getElementById("slideshow-button2").style.color = "gray";
+    document.getElementById("slideshow-button3").style.color = "white";
+    document.getElementById("slideshow-button4").style.color = "white";
+  }
+   else if(myIndex === 2) {
+    document.getElementById("slideshow-button1").style.color = "white";
+    document.getElementById("slideshow-button2").style.color = "white";
+    document.getElementById("slideshow-button3").style.color = "gray";
+    document.getElementById("slideshow-button4").style.color = "white";
+  }
+   else if(myIndex === 3) {
+    document.getElementById("slideshow-button1").style.color = "white";
+    document.getElementById("slideshow-button2").style.color = "white";
+    document.getElementById("slideshow-button3").style.color = "white";
+    document.getElementById("slideshow-button4").style.color = "gray";
   }
 }
 

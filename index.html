@@ -18,24 +18,51 @@
 
 <body>
     <header>
-        <div class="header">
+        <nav class="header">
 
             <img src="./icons/bird-ico.png" class="ico-image">
 
-            <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
-                Cars
-            </button>
+            <input type="text" placeholder="Search:" class="search-bar-main-right-bar">
 
-            <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
-                Map
-            </button>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
+                    fill="#e8eaed">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
 
-            <input type="text" placeholder="Search:" class="search-bar">
 
-            <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
-                Cars
-            </button>
-        </div>
+            <div class="links-container">
+                <label id="overlay" for="sidebar-active"></label>
+
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
+                        fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
+
+
+
+                <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+                    Cars
+                </button>
+
+                <input type="text" placeholder="Search:" class="search-bar-main-top-bar">
+
+                <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+                    Map
+                </button>
+
+
+
+                <button class="cars-button" onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+                    Cars
+                </button>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="learn">
@@ -51,19 +78,44 @@
                 <div class="main-slideshow">
                     <img class="image-mains-slideshow" src="./thumbnails/C8_corvette_stingray_6.jpeg">
                     <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text-author">@tibounise</p><br>
                         <p class="slideshow-model-text">Corvette</p>
                         <p class="slideshow-model-text">C8 Stingray</p>
                         <p class="slideshow-model-text">2020</p>
                     </div>
                 </div>
+
                 <div class="main-slideshow">
                     <img class="image-mains-slideshow" src="./thumbnails/C8_corvette_ZO6_1.jpeg">
                     <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text-author">@tibounise</p><br>
                         <p class="slideshow-model-text">Corvette</p><br>
                         <p class="slideshow-model-text">C8 ZO6</p><br>
                         <p class="slideshow-model-text">2023</p><br>
                     </div>
                 </div>
+
+                <div class="main-slideshow">
+                    <img class="image-mains-slideshow" src="./thumbnails/McLaren_750s.jpeg">
+                    <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text-author">@tibounise</p><br>
+                        <p class="slideshow-model-text">Mclaren</p><br>
+                        <p class="slideshow-model-text">750s</p><br>
+                        <p class="slideshow-model-text">Na</p><br>
+                    </div>
+                </div>
+
+                <div class="main-slideshow">
+                    <img class="image-mains-slideshow" src="./thumbnails/lamborghini_aventador_3.jpeg">
+                    <div class="image-main-slideshow-model">
+                        <p class="slideshow-model-text-author">@tibounise</p><br>
+                        <p class="slideshow-model-text">Lamborghini</p><br>
+                        <p class="slideshow-model-text">Aventador</p><br>
+                        <p class="slideshow-model-text">Na</p><br>
+                    </div>
+                </div>
+
+
             </div>
             <div class="bottom-main-buttons">
                 <div class="video-controls-menu">
@@ -78,9 +130,19 @@
                     <span class="material-symbols-outlined slideshow-button" id="slideshow-button1" onclick="view(1)">
                         radio_button_checked
                     </span>
+
                     <span class="material-symbols-outlined slideshow-button" id="slideshow-button2" onclick="view(2)">
                         radio_button_checked
                     </span>
+
+                    <span class="material-symbols-outlined slideshow-button" id="slideshow-button3" onclick="view(3)">
+                        radio_button_checked
+                    </span>
+
+                    <span class="material-symbols-outlined slideshow-button" id="slideshow-button4" onclick="view(4)">
+                        radio_button_checked
+                    </span>
+
                 </div>
             </div>
         </div>

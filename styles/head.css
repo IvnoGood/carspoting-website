@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(10, 10, 10);
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(10, 10, 10, 0.5);
+    height: 55px;
     
 }
 
@@ -27,10 +27,8 @@
     border: none;
     height: 55px;
     cursor: pointer;
-    /* width: 150px; */
-    flex: 1;
-    width: 0;
-
+    flex: 1; /* Ensure buttons take equal space */
+    width: 0; /* No specific width, flex handles it */
 }
 
 .cars-button:hover {
@@ -39,25 +37,112 @@
     border-bottom: 2px solid white ;
 }
 
-.search-bar {
-    background-color: rgb(22, 22, 22) ;
+.search-bar-main-top-bar, .search-bar-main-right-bar {
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border-radius: 10px;
     border: none;
-    background-color:rgba(0, 0, 0, 0.4);
     height: 30px;
-    flex: 1;
-    max-width: 450px;
-    width: 0;
-    min-width: 50px;
+    flex: 2; /* Adjusted flex-grow to match the total space of the buttons */
     padding-left: 10px;
     outline: none;
+    max-width: 100%; /* Allow the search bar to take up full available width */
 }
-
-.search-bar::placeholder{
+.search-bar-main-top-bar::placeholder, .search-bar-main-right-bar::placeholder{
     opacity: 1;
 }
 
-.search-bar:focus {
+.search-bar-main-top-bar:focus, .search-bar-main-right-bar:focus {
     border: 2px solid white;
+}
+
+.search-bar-main-right-bar {
+    display: none;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: none;
+}
+
+
+
+@media(max-width: 545px) {
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 250px;
+
+        background-color: rgba(22, 22, 22, 0.95);
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: ease-out 0.7s;
+    }
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .search-bar-main-top-bar {
+        display: none;
+    }
+
+    .search-bar-main-right-bar {
+        display: block;
+    }
+
+    .open-sidebar-button, .close-sidebar-button {
+    padding: 20px;
+    display: block;
+    align-items: center;
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    #sidebar-active:checked ~ .open-sidebar-button {
+        display: none;
+    }
+
+    .cars-button {
+        border: none; /* Adjust border for smaller screens */
+        padding: 8px; /* Adjust padding */
+        width: 100%; /* Full width for better appearance in the sidebar */
+        margin-right: 100%;
+        text-align: start;
+    }
+    
+    .cars-button:hover {
+        border-bottom: none;
+        text-align: start;
+    }
 }
