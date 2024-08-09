@@ -34,7 +34,6 @@ function carousel() {
     }
     x[myIndex - 1].style.display = "block";
     carouselTimeout = setTimeout(carousel, 9000);
-    console.log(myIndex);
   }
 }
 
@@ -84,3 +83,27 @@ function updateButtons() {
 if (played) {
   carousel();
 }
+
+// Execute a function when the user presses a key on the keyboard
+document.getElementById("search-input").addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("search-enter").click();
+    console.log("enter");
+  }
+});
+
+
+document.getElementById("search-input").addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("search-enter-top-bar").click();
+    console.log("enter");
+  }
+});
