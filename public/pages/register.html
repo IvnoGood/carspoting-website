@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="../styles/login-register.css">
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.png">
+</head>
+
+<body>
+    <!-- <div class="login">
+        <h1>Register</h1>
+        <form method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" class="input-fields" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" class="input-fields" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Repeat Password" id="password-repeat"
+                class="input-fields" required>
+            <input type="submit" value="Register" id="submit">
+            <div class="error-box">
+                <p class="error-text" id="error-text"></p>
+
+            </div>
+            <p>Already have an account <a href="../pages/login.html">Log in</a></p>
+        </form>
+    </div> -->
+    <header>
+        <nav class="header" id="header">
+            <div class="image-label">
+                <img src="../icons/favicon-redesigned.png" class="ico-image" onclick="window.location='../index.html';">
+            </div>
+
+            <button type="submit" id="search-enter" class="header-fields-buttons"></button>
+            <div class="searchboc-top-bar-container">
+                <label for="search-bar-main-right-bar">
+                    <svg class="search-input-topbar-logo-right" fill="#fff" height="25px" width="25px" version="1.1"
+                        id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 183.792 183.792" xml:space="preserve">
+                        <path
+                            d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22
+                                        	c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583
+                                        	c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0
+                                        	C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806
+                                        	c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25
+                                        	c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z" />
+                    </svg>
+                </label>
+                <input type="text" name="Search" placeholder="Search:" class="search-bar-main-right-bar"
+                    id="search-bar-main-right-bar">
+            </div>
+            <!-- Using a submit button properly --
+            
+            
+                         <form action="https://httpbin.org/get" method="get">
+                            <fieldset>
+                                <legend>Personal informations</legend>
+                                <p>
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required>
+                                    autofocus
+                                </p>
+                            </fieldset>
+                            <button type="submit">Submit</button>
+                            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                        </form> -->
+
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
+                    fill="#e8eaed">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
+
+
+            <div class="links-container">
+                <label id="overlay" for="sidebar-active"></label>
+
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
+                        fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
+
+
+
+                <button class="cars-button" onclick="window.location.href = './idk.html';">
+                    Cars
+                </button>
+
+                <!--  -->
+                <div class="searchboc-top-bar-container">
+                    <label for="search-input-top-bar" class="search-input-topbar-logo">
+                        <svg class="search-input-topbar-logo" fill="#fff" height="25px" width="25px" version="1.1"
+                            id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 183.792 183.792" xml:space="preserve">
+                            <path
+                                d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22
+                            	c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583
+                            	c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0
+                            	C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806
+                            	c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25
+                            	c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z" />
+                        </svg>
+                    </label>
+                    <input type="text" name="Search2" placeholder="Search:" class="search-bar-main-top-bar"
+                        id="search-input-top-bar">
+                </div>
+                <!-- Using a submit button properly -->
+                <button type="submit" id="search-enter-top-bar" class="header-fields-buttons"></button>
+
+                <button class="cars-button" onclick="window.location.href = './pages/map.html';">
+                    Map
+                </button>
+
+
+                <div class="profile-box" id="profile-box">
+
+                    <img src="../icons/profile-pic.jpeg" alt="" class="profile-pic" id="currentuser-profilepicture">
+                    <p class="profile-text" id="currentuser-username">Guest</p>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="title-box">
+        <h2 class="title">Join the&nbsp;</h2>
+        <h2 class="title-brand">WeSpot&nbsp;</h2>
+        <h2 class="title">community</h2>
+    </div>
+    <div class="login">
+        <form method="post">
+            <h1 class="login-title">Register</h1>
+            <label for="username">
+                <p class="login-description">Username:</p>
+            </label>
+            <label for="username" class="labels">
+                <i class="fas fa-user labels"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" class="input-fields"><br>
+
+            <label for="email">
+                <p class="login-description">Email:</p>
+            </label>
+            <label for="email" class="labels">
+                <i class="fas fa-user labels"></i>
+            </label>
+            <input type="text" name="email" placeholder="Email" id="email" class="input-fields" required><br>
+
+            <label for="password">
+                <p class="login-description">Password:</p>
+            </label>
+            <label for="password" class="labels">
+                <i class="fas fa-lock labels"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" class="input-fields"
+                required><br>
+            <input type="submit" value="Register" id="register" class="input-button">
+            <div class="error-box">
+                <p class="error-text" id="error-text"></p>
+
+            </div>
+            <div id="googleloginbox">
+                <label for="google" id="googlelogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                        width="48px" height="48px">
+                        <path fill="#FFC107"
+                            d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                        <path fill="#FF3D00"
+                            d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                        <path fill="#4CAF50"
+                            d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                        <path fill="#1976D2"
+                            d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                    </svg></label>
+                <div id="googlehover"></div>
+                <button id="google" type="submit">Google</button><br>
+            </div>
+            <button id="button"></button>
+            <p>Already have an account <a href="../pages/login.html">Log in</a></p>
+        </form>
+    </div>
+</body>
+
+<script type="module" src="../javascript/register.js"></script>
+
+</html>

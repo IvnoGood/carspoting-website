@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+
+    background-image: url(../thumbnails/audi_r8_V8_5.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/*
+
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+.login form input[type="password"],
+.login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.login form input[type="submit"]:hover {
+    background-color: #2868c7;
+    transition: background-color 0.2s;
+} */
+
+.title-box {
+    display: flex;
+    margin-left: 35px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.title,
+.title-brand {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+}
+
+.title-brand {
+    color: #FF6D6D;
+}
+
+form {
+    width: 100%;
+}
+
+.login {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex: 1;
+    min-width: 310px;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 420px;
+    justify-content: center;
+    height: auto;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 15px;
+
+}
+
+.login-title {
+    margin: 0;
+    height: fit-content;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.login-description {
+    margin: 0;
+}
+
+.input-fields {
+    height: 30px;
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(#ACABAB, #DFDFDF);
+    margin-left: 17px;
+}
+
+.input-fields:focus {
+    outline: white solid 2px;
+}
+
+.input-fields::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.input-button {
+    margin-top: 15px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(#ACABAB, #DFDFDF);
+    cursor: pointer;
+}
+
+.labels {
+    margin-top: 3px;
+    position: absolute;
+}
+
+.error-box {
+    height: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.error-text {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+
+#googlelogo {
+    background-color: transparent;
+}
+
+#google {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-right: 5px;
+    color: white;
+}
+
+#googleloginbox {
+    align-items: center;
+    flex: 0;
+    margin-top: 0px;
+    display: flex;
+    border-color: #3274d6;
+    border-style: none;
+    vertical-align: middle;
+    margin-right: 70%;
+}
+
+#googleloginbox:hover {
+    border-color: #2868c7;
+}
+
+#googlehover {
+    background-color: rgba(238, 2, 2, 0);
+    position: absolute;
+    height: 8%;
+    width: 110px;
+}
+
+#googlehover:hover {
+    cursor: pointer;
+    background-color: #c3c6cb69;
+    border-radius: 15px;
+}
+
+@media(max-width: 545px) {
+    .title-box {
+        display: none;
+        position: absolute;
+    }
+}

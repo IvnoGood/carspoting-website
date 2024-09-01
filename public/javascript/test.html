@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button">Submit</button>
+    <ul class="account-dropdown-menu">
+        <li>
+            <span class="material-symbols-outlined login-icon">
+                login
+            </span>
+            <p class="item-dropdown-menu">Item</p>
+        </li>
+    </ul>
+    </div>
+</body>
+<script type="module">
+
+    // Import the functions you need from the SDKs you need
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+    // Your web app's Firebase configuration
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+    const firebaseConfig = {
+
+        apiKey: "AIzaSyC6OVBiOIM_hV17n1sKabOQd2vOYwcImoY",
+
+        authDomain: "wespot-website.firebaseapp.com",
+
+        databaseURL: "https://wespot-website-default-rtdb.europe-west1.firebasedatabase.app",
+
+        projectId: "wespot-website",
+
+        storageBucket: "wespot-website.appspot.com",
+
+        messagingSenderId: "864768589048",
+
+        appId: "1:864768589048:web:f76790c9abfa6b2e594f0d",
+
+        measurementId: "G-0ZD710W4YE"
+
+    };
+    const userId = undefined;
+    const info = "value";
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const database = getDatabase();
+
+    document.getElementById("button").addEventListener("click", function () {
+        const db = getDatabase();
+        set(ref(db, 'users/' + userId), {
+            username: info,
+            email: info,
+            profile_picture: info
+        });
+    });
+
+</script>
+
+</html>

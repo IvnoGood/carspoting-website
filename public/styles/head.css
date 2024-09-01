@@ -1,0 +1,370 @@
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(10, 10, 10, 0.5);
+    height: 55px;
+    /*some tests*/
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    z-index: 1000;
+    top: 0;
+
+}
+
+.header.visible {
+    transform: translateY(0);
+}
+
+.ico-image {
+    justify-content: center;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image-label {
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    max-width: 90px;
+    flex: 1;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.image-label:hover {
+    background-color: var(--hover-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid white;
+}
+
+.cars-button {
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    border: none;
+    height: 55px;
+    cursor: pointer;
+    flex: 1;
+    /* Ensure buttons take equal space */
+    width: 0;
+    /* No specific width, flex handles it */
+}
+
+.cars-button:hover {
+    background-color: var(--hover-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid white;
+}
+
+.search-bar-main-top-bar,
+.search-bar-main-right-bar {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    /*flex: 1;*/
+    width: 80%;
+    /* Adjusted flex-grow to match the total space of the buttons */
+    padding-left: 10px;
+    outline: none;
+    max-width: 100%;
+    /* Allow the search bar to take up full available width */
+    margin-right: 5px;
+    padding-left: 28px;
+}
+
+.search-input-topbar-logo,
+.search-input-topbar-logo-right {
+    margin-top: 2px;
+    position: absolute;
+    margin-left: 1px;
+}
+
+.search-input-topbar-logo-right {
+    margin-top: 3px;
+    margin-left: 2px;
+    display: none;
+}
+
+.searchboc-top-bar-container {
+    flex: 1;
+    justify-content: center;
+    padding-left: 17px;
+}
+
+.search-bar-main-top-bar::placeholder,
+.search-bar-main-right-bar::placeholder {
+    opacity: 1;
+
+}
+
+.search-bar-main-top-bar:focus,
+.search-bar-main-right-bar:focus {
+    border: 2px solid white;
+}
+
+.search-bar-main-right-bar {
+    display: none;
+}
+
+.header-fields {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.header-form {
+    width: 0;
+    display: flex;
+}
+
+.header-fields-buttons {
+    display: none;
+    margin-bottom: 50px;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+
+
+@media(max-width: 545px) {
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 250px;
+        height: 550px;
+        height: fit-content;
+
+        background-color: var(--hover-color);
+        background-color: rgba(0, 0, 0, 0.95);
+
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: ease-out 0.7s;
+        justify-content: flex-start;
+    }
+
+    .searchboc-top-bar-container {
+        display: none;
+    }
+
+    #sidebar-active:checked~.links-container {
+        transform: translateX(0);
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .search-bar-main-top-bar {
+        display: none;
+        position: absolute;
+    }
+
+    .search-input-topbar-logo {
+        display: none;
+        position: absolute;
+        width: 0;
+    }
+
+    .search-bar-main-right-bar,
+    .search-input-topbar-logo-right {
+        display: block;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: 20px;
+        display: block;
+        align-items: center;
+    }
+
+    #sidebar-active:checked~.links-container {
+        right: 0;
+    }
+
+    #sidebar-active:checked~#overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    #sidebar-active:checked~.open-sidebar-button {
+        display: none;
+    }
+
+    .cars-button {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        max-height: 50px;
+        justify-content: flex-start;
+        margin-right: 100%;
+        margin-bottom: 25px;
+        text-align: start;
+
+    }
+
+    .cars-button:hover {
+        border-left: 2px solid white;
+        border-bottom: none;
+        text-align: start;
+    }
+
+    #slideshow-button1,
+    #slideshow-button2,
+    #slideshow-button3,
+    #slideshow-button4 {
+        display: none;
+        position: absolute;
+    }
+
+    .profile-box {
+        width: 100%;
+        margin-top: auto;
+        justify-content: flex-start;
+    }
+
+    .searchboc-top-bar-container {
+        position: relative;
+    }
+
+    .account-dropdown-menu {
+        top: 250px;
+    }
+
+    .profile-box:hover .account-dropdown-menu {
+        transform: translateY(55px);
+        transition: ease-in-out 0.2s;
+    }
+}
+
+.profile-box {
+    display: flex;
+    flex: 1;
+    height: 55px;
+    max-width: 200px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-box:hover {
+    background-color: var(--hover-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid white;
+}
+
+.profile-box:hover .account-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(55px);
+    transition: ease-in-out 0.2s;
+}
+
+.profile-pic {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.logedin {
+    display: flex;
+}
+
+.not-logedin {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-text {
+    color: white;
+    margin-right: 0px;
+    width: auto;
+    white-space: nowrap;
+}
+
+.loginbtn {
+    color: white;
+    flex: 1;
+    min-width: 70px;
+    text-align: center;
+    margin-right: 0;
+}
+
+.login-icon {
+    color: white;
+    height: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.account-dropdown-menu {
+    margin: 0;
+    display: none;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    list-style: none;
+    flex-direction: row;
+}
+
+.item-dropdown-menu {
+    color: white;
+}
+
+.classdropdown-item {
+    display: flex;
+    background-color: var(--hover-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+#logOut {
+    border: none;
+    background-color: transparent;
+    color: white;
+
+}
