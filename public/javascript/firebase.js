@@ -1,4 +1,4 @@
-/* // Import the functions you need from the SDKs you need
+/*  // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js"
 import {
@@ -128,12 +128,21 @@ export function registerbtn(register, emailinput, passwordinput) {
         .then((userCredential) => {
             // Signed up
             const user = userCredential.user;
-            writeUserData(user);
             const provider = "local";
             getUserDetails(user);
             saveUserdetails(user, provider);
-            window.alert(email + password);
-            window.location.href = accountredirect;
+            writeUserData(user)
+                .then(() => {
+                    console.log("User data updated successfully!");
+
+                    // Now perform the redirect after the data is written
+                    window.alert(email + " registered successfully.");
+                    window.location.href = accountredirect;
+                })
+                .catch((error) => {
+                    console.error("Error updating user data: ", error);
+                    document.getElementById('error-text').innerHTML = error.message;
+                });
             return user;
 
         })
@@ -255,11 +264,19 @@ export function logOut() {
 
 
 function writeUserData(user) {
-    /* console.log("writeUserData");
+    console.log("writeUserData");
     const userId = user.uid;
     // Update the user's data in the database
     console.log("writing to db " + ref(database, 'users/' + userId));
-    set(ref(database, 'users/' + userId), {
+
+    if (user.displayName == undefined) {
+    }
+
+    if (user.photoURL == undefined) {
+    }
+
+
+    return set(ref(database, 'users/' + userId), {
         email: user.email,
         displayName: user.displayName,
         profilePicture: user.photoURL
@@ -269,26 +286,22 @@ function writeUserData(user) {
     }).catch((error) => {
         console.error("Error saving data: ", error);
         window.alert("Error saving data: ", error);
-    }); */
+    });
 
 
-    const userId = user.uid;
-    const info = "value";
-
-    // Update the user's data in the database
-    const db = getDatabase();
-    set(ref(db, 'users/' + userId), {
-        username: info,
-        email: info,
-        profile_picture: info
-    })
-        .then(() => {
-            console.log("User data updated successfully!");
-        })
-        .catch((error) => {
-            console.error("Error updating user data: ", error);
-        });
+    /*     const userId = user.uid;
+        const info = "value";
+    
+        // Update the user's data in the database
+        const db = getDatabase();
+        return set(ref(db, 'users/' + userId), {
+            username: info,
+            email: info,
+            profile_picture: info
+        });*
+        */
 }
+
 
 //----------------------------------------------------other-------------------------------------------------------//
 
